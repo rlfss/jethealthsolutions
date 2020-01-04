@@ -7,9 +7,10 @@
 	'description': "This module adds the Demo Data for HR.",
 	'author': 'Farooq',
 	'website': 'http://www.aarsolerp.com/',
-	'depends': ['base','hr','hr_recruitment'],
+	'depends': ['base','hr','hr_recruitment','hr_attendance'],
 	'data': [
 		'data/hr_demo.xml',
+		'data/hr_attendance_demo.xml',
 	],
 	'license': 'AGPL-3',
 	'installable': True,
