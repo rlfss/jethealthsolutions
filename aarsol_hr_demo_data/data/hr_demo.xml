@@ -1,0 +1,1114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+    <!--Department-->
+    <!--
+    <record id="dep_admission" model="hr.department">
+      <field name="name">Admission</field>
+    </record>
+
+    <record id="dep_exam" model="hr.department">
+      <field name="name">Examination</field>
+    </record>
+    -->
+
+    <record id="dep_it" model="hr.department">
+      <field name="name">Information Technology</field>
+    </record>
+
+    <record id="dep_finance" model="hr.department">
+      <field name="name">Finance</field>
+    </record>
+
+    <record id="dep_hr" model="hr.department">
+      <field name="name">Human Resource</field>
+    </record>
+
+    <record id="dep_procurement" model="hr.department">
+      <field name="name">Procurement</field>
+    </record>
+
+    <record id="dep_academics" model="hr.department">
+      <field name="name">Academics</field>
+    </record>
+
+    <record id="dep_administration" model="hr.department">
+      <field name="name">Administration</field>
+    </record>
+
+    <record id="dep_operations" model="hr.department">
+      <field name="name">Operations</field>
+    </record>
+
+    <record id="dep_lgl" model="hr.department">
+      <field name="name">Legal Affairs</field>
+    </record>
+
+    <record id="dep_management" model="hr.department">
+      <field name="name">Management</field>
+    </record>
+
+    <!--Jobs-->
+    <record id="job_ceo" model="hr.job">
+        <field name="name">Chief Executive Officer</field>
+        <field name="department_id" ref="dep_management"/>
+        <field name="description">
+            An experienced CEO to manage day-to-day operations of our company.
+            The right candidate must be ready to build and model a great company culture,
+            provide inspired leadership to our executive team,
+            establish a great working relationship with the board of directors and set a course for company strategy.
+        </field>
+        <field name="requirements">
+            Master's degree in a relevant discipline or MBA.
+            Good Communication skills.
+            Work with senior stakeholders, chief financial officer, chief information officer, and other executives.
+            Experience in a senior management position.
+            Ability to build consensus and relationships among executives, partners, and the workforce.
+            Understanding of human resources and personnel management.
+            Experience with corporate governance.
+            Proven negotiation skills.
+            Ability to understand new issues quickly and make wise decisions.
+            Ability to inspire confidence and create trust.
+            Ability to work under pressure, plan personal workload effectively and delegate
+            Candidate should be ready to work in young and dynamic environment..
+            Candidate should be able to work in ???start- up??? fast paced environment,hands on attitude.
+            Honest,approachable and fun team player.
+            Result driven.
+            Excellent analytical skills, ability to think logically and "out of the box
+        </field>
+    </record>
+
+    <record id="job_cfo" model="hr.job">
+        <field name="name">Chief Financial Officer</field>
+        <field name="department_id" ref="dep_finance"/>
+        <field name="requirements">
+            A Bachelor???s degree in the Accounting, Finance or Economics will be expected for this role.
+            An MBA or CPA is also highly desirable.
+            At least 10 years' experience in the finance industry and managing a team is a must
+            with examples of when they have demonstrated excellence in the workplace.
+            A CFO must display a cohesive ability at interpersonal and communication skills, both verbally and written.
+            They must be able to engage with staff at all levels of the organisation and exercise sound judgement
+        </field>
+        <field name="description">
+            As part of an executive management team, the CFO will have interaction with various members of a company, both senior and junior.
+            CFO job description includes:
+            Providing leadership, direction and management of the finance and accounting team
+            Providing strategic recommendations to the CEO/president and members of the executive management team
+            Managing the processes for financial forecasting and budgets, and overseeing the preparation of all financial reporting
+            Advising on long-term business and financial planning
+            Establishing and developing relations with senior management and external partners and stakeholders
+            Reviewing all formal finance, HR and IT related procedures
+        </field>
+    </record>
+
+    <record id="job_consultant" model="hr.job">
+      <field name="name">Legal Consultant</field>
+      <field name="department_id" ref="dep_lgl"/>
+      <field name="no_of_recruitment">1</field>
+    </record>
+
+    <record id="job_developer" model="hr.job">
+        <field name="name">Software Developer</field>
+        <field name="department_id" ref="dep_it"/>
+        <field name="no_of_recruitment">5</field>
+    </record>
+
+    <record id="job_hrm" model="hr.job">
+        <field name="name">Human Resource Manager</field>
+        <field name="department_id" ref="dep_hr"/>
+        <field name="description">
+            We are looking for an HR Executive to manage our company???s recruiting, learning and development and employee performance programs.
+            HR Executive responsibilities include creating referral programs, updating HR policies and overseeing our hiring processes. To be successful in this role, you should have an extensive background in Human Resources departments and thorough knowledge of labor legislation.
+            Ultimately, you will make strategic decisions for our company so that we hire, develop and retain qualified employees.
+        </field>
+        <field name="requirements">
+            Proven work experience as an HR Executive, HR Manager or similar role
+            Familiarity with Human Resources Management Systems and Applicant Tracking Systems
+            Experience with full-cycle recruiting
+            Good knowledge of labor legislation (particularly employment contracts, employee leaves and insurance)
+            Demonstrable leadership abilities
+            Solid communication skills
+            BSc/MSc in Human Resources Management or relevant field</field>
+    </record>
+    <record id="job_sr_teacher" model="hr.job">
+        <field name="name">Senior Subject Specialist</field>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="no_of_recruitment">3</field>
+    </record>
+
+    <record id="job_jr_teacher" model="hr.job">
+        <field name="name">Junior Subject Specialist</field>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="no_of_recruitment">2</field>
+    </record>
+<!--
+    <record id="job_invigilator" model="hr.job">
+        <field name="name">Invigilator</field>
+        <field name="department_id" ref="dep_exam"/>
+        <field name="no_of_recruitment">1</field>
+    </record>
+-->
+ <!--
+    <record id="job_dir_exam" model="hr.job">
+        <field name="name">Director Examination</field>
+        <field name="department_id" ref="dep_exam"/>
+        <field name="no_of_recruitment">1</field>
+    </record>
+ -->
+    <record id="job_dir_it" model="hr.job">
+        <field name="name">Director Information Technology</field>
+        <field name="department_id" ref="dep_it"/>
+        <field name="no_of_recruitment">1</field>
+    </record>
+<!--
+    <record id="job_adm_officer" model="hr.job">
+        <field name="name">Admission Officer</field>
+        <field name="department_id" ref="dep_admission"/>
+        <field name="no_of_recruitment">2</field>
+    </record>
+  -->
+        <!--
+    <record id="job_dir_adm" model="hr.job">
+        <field name="name">Director Admission</field>
+        <field name="department_id" ref="dep_admission"/>
+        <field name="no_of_recruitment">1</field>
+    </record>
+-->
+    <record id="job_counselor" model="hr.job">
+        <field name="name">Student Counselor</field>
+        <field name="department_id" ref="dep_administration"/>
+        <field name="no_of_recruitment">2</field>
+    </record>
+
+    <record id="job_purchase_officer" model="hr.job">
+        <field name="name">Purchase Officer</field>
+        <field name="department_id" ref="dep_procurement"/>
+        <field name="no_of_recruitment">1</field>
+    </record>
+
+    <record id="job_account_officer" model="hr.job">
+        <field name="name">Accounts Officer</field>
+        <field name="department_id" ref="dep_finance"/>
+        <field name="no_of_recruitment">1</field>
+    </record>
+
+    <record id="job_hr_officer" model="hr.job">
+        <field name="name">HR Officer</field>
+        <field name="department_id" ref="dep_hr"/>
+        <field name="no_of_recruitment">1</field>
+    </record>
+
+    <record id="job_dir_academics" model="hr.job">
+        <field name="name">Director Academics</field>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="no_of_recruitment">1</field>
+    </record>
+
+    <!-- Employee categories -->
+    <record id="employee_category_1" model="hr.employee.category">
+        <field name="name">Subject Specialist</field>
+        <field name="color" eval="1"/>
+    </record>
+
+    <record id="employee_category_3" model="hr.employee.category">
+        <field name="name">Trainer</field>
+        <field name="color" eval="2"/>
+    </record>
+
+    <record id="employee_category_4" model="hr.employee.category">
+        <field name="name">Employee</field>
+        <field name="color" eval="6"/>
+    </record>
+
+    <record id="employee_category_5" model="hr.employee.category">
+        <field name="name">Consultant</field>
+        <field name="color" eval="4"/>
+    </record>
+
+    <record id="employee_category_6" model="hr.employee.category">
+        <field name="name">Counselor</field>
+        <field name="color" eval="5"/>
+    </record>
+
+     <!--Employees-->
+    <record id="employee_1" model="hr.employee">
+        <field name="name">Areeba Sibghat</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-555-2389</field>
+        <field name="work_email">areeba.sibg71@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'), ref('employee_category_3')])]"/>
+        <field name="job_id" ref="job_ceo"/>
+        <field name="department_id" ref="dep_management"/>
+        <field name="identification_id">599087</field>
+        <field name="gender">female</field>
+        <field name="birthday">1982-05-03</field>
+        <field name="marital">married</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_1.jpeg"/>
+    </record>
+
+    <record id="employee_2" model="hr.employee">
+        <field name="name">Amna Haroon</field>
+        <field name="department_id" ref="dep_finance"/>
+        <field name="job_id" ref="job_cfo"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'), ref('employee_category_3')])]"/>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-511-9695</field>
+        <field name="work_email">amna.haroon87@yahoo.com</field>
+        <field name="parent_id" ref="employee_1"/>
+        <field name="identification_id">89775</field>
+        <field name="gender">female</field>
+        <field name="birthday">1988-04-10</field>
+        <field name="marital">married</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_2.jpeg"/>
+    </record>
+
+     <record id="employee_3" model="hr.employee">
+        <field name="name">Rabia Mohsin</field>
+        <field name="department_id" ref="dep_finance"/>
+        <field name="job_id" ref="job_account_officer"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4')])]"/>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-500-0234</field>
+        <field name="mobile_phone">(0333)-572-3185</field>
+        <field name="work_email">rabia.mohsin32@yahoo.com</field>
+        <field name="parent_id" ref="employee_2"/>
+        <field name="identification_id">85673</field>
+        <field name="gender">female</field>
+        <field name="birthday">1992-01-20</field>
+        <field name="marital">single</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_3.jpeg"/>
+    </record>
+    <record id="employee_4" model="hr.employee">
+        <field name="name">Anum Osama</field>
+        <field name="department_id" ref="dep_finance"/>
+        <field name="job_id" ref="job_account_officer"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4')])]"/>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-519-5152</field>
+        <field name="work_email">anum.osama49@yahoo.comcom</field>
+        <field name="parent_id" ref="employee_2"/>
+        <field name="identification_id">67342</field>
+        <field name="gender">female</field>
+        <field name="birthday">1989-02-03</field>
+        <field name="marital">married</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_4.jpeg"/>
+    </record>
+
+     <record id="employee_5" model="hr.employee">
+        <field name="name">Asim Sheikh</field>
+        <field name="department_id" ref="dep_finance"/>
+        <field name="parent_id" ref="employee_1"/>
+        <field name="job_id" ref="job_account_officer"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4')])]"/>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="phone">(332)-775-6660</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="work_email">asim.sheikh74@yahoo.com</field>
+        <field name="parent_id" ref="employee_1"/>
+        <field name="identification_id">26548</field>
+        <field name="gender">male</field>
+        <field name="birthday">1986-09-26</field>
+        <field name="marital">married</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_5.jpeg"/>
+    </record>
+
+     <record id="employee_6" model="hr.employee">
+        <field name="name">Javaria Zubair</field>
+        <field name="department_id" ref="dep_finance"/>
+        <field name="job_id" ref="job_account_officer"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4')])]"/>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-563-8229</field>
+        <field name="work_email">javaria.zubair76@yahoo.com</field>
+        <field name="parent_id" ref="employee_2"/>
+        <field name="identification_id">86509</field>
+        <field name="gender">female</field>
+        <field name="birthday">1980-04-03</field>
+        <field name="marital">married</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_6.jpeg"/>
+    </record>
+
+     <record id="employee_7" model="hr.employee">
+        <field name="name">Ali Afzal</field>
+        <field name="department_id" ref="dep_hr"/>
+        <field name="job_id" ref="job_hrm"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4')])]"/>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-561-1222</field>
+        <field name="work_email">ali.afzal@yahoo.com</field>
+        <field name="parent_id" ref="employee_1"/>
+        <field name="identification_id">87334</field>
+        <field name="gender">male</field>
+        <field name="birthday">1985-06-15</field>
+        <field name="marital">married</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_7.jpeg"/>
+    </record>
+
+    <record id="employee_8" model="hr.employee">
+        <field name="name">Komal Shamsher</field>
+        <field name="department_id" ref="dep_hr"/>
+        <field name="job_id" ref="job_hr_officer"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4')])]"/>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-505-5146</field>
+        <field name="work_email">komal.shams55@yahoo.com</field>
+        <field name="parent_id" ref="employee_7"/>
+        <field name="identification_id">74556</field>
+        <field name="gender">female</field>
+        <field name="birthday">1990-02-28</field>
+        <field name="marital">single</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_8.jpeg"/>
+    </record>
+
+    <record id="employee_9" model="hr.employee">
+        <field name="name">Alayan Usman</field>
+        <field name="department_id" ref="dep_hr"/>
+        <field name="job_id" ref="job_hr_officer"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4')])]"/>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="phone">(0321)-576-7903</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="work_email">alayan.usman25@yahoo.com</field>
+        <field name="parent_id" ref="employee_7"/>
+        <field name="identification_id">67549</field>
+        <field name="gender">male</field>
+        <field name="birthday">1994-10-07</field>
+        <field name="marital">single</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_9.jpeg"/>
+    </record>
+
+    <record id="employee_10" model="hr.employee">
+        <field name="name">Tariq Jameel</field>
+        <field name="department_id" ref="dep_hr"/>
+        <field name="job_id" ref="job_hr_officer"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4')])]"/>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0333)-707-8451</field>
+        <field name="work_email">tariq.jamil23@yahoo.com</field>
+        <field name="parent_id" ref="employee_7"/>
+        <field name="identification_id">231776</field>
+        <field name="gender">male</field>
+        <field name="birthday">1993-09-22</field>
+        <field name="marital">single</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_10.jpeg"/>
+    </record>
+
+    <record id="employee_11" model="hr.employee">
+        <field name="name">Junaid Tariq</field>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="job_id" ref="job_dir_academics"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'), ref('employee_category_1')])]"/>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="phone">(0321)-555-7362</field>
+        <field name="work_email">junaid.tariq72@yahoo.com</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="parent_id" ref="employee_1"/>
+        <field name="identification_id">87456</field>
+        <field name="gender">male</field>
+        <field name="birthday">1973-03-03</field>
+        <field name="marital">married</field>
+        <field name="image_1920"  type="base64" file="aarsol_hr_demo_data/static/img/employee_11.jpeg"/>
+    </record>
+
+    <record id="employee_12" model="hr.employee">
+        <field name="name">Tabinda Waseem</field>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="job_id" ref="job_sr_teacher"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'),ref('employee_category_1')])]"/>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="phone">(0333)-694-7266</field>
+        <field name="work_email">tabinda.waseem98@yahoo.com</field>
+        <field name="parent_id" ref="employee_11"/>
+        <field name="identification_id">45223</field>
+        <field name="gender">female</field>
+        <field name="birthday">1995-09-03</field>
+        <field name="marital">single</field>
+        <field name="image_1920"  type="base64" file="aarsol_hr_demo_data/static/img/employee_12.jpeg"/>
+    </record>
+
+    <record id="employee_13" model="hr.employee">
+        <field name="name">Wasif Saleem</field>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="job_id" ref="job_sr_teacher"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'),ref('employee_category_1')])]"/>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0333)-912-1201</field>
+        <field name="work_email">wasif.wasim80@yahoo.com</field>
+        <field name="parent_id" ref="employee_11"/>
+        <field name="identification_id">96774</field>
+        <field name="gender">male</field>
+        <field name="birthday">1993-03-18</field>
+        <field name="marital">single</field>
+        <field name="image_1920"  type="base64" file="aarsol_hr_demo_data/static/img/employee_13.jpeg"/>
+    </record>
+
+    <record id="employee_14" model="hr.employee">
+        <field name="name">Pervaiz Yousaf</field>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="job_id" ref="job_sr_teacher"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'),ref('employee_category_1')])]"/>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="phone">(0321)-522-1607</field>
+        <field name="work_email">pervaiz.yousaf59@yahoo.com</field>
+        <field name="parent_id" ref="employee_1"/>
+        <field name="identification_id">230946</field>
+        <field name="gender">male</field>
+        <field name="birthday">1988-09-12</field>
+        <field name="marital">married</field>
+        <field name="image_1920"  type="base64" file="aarsol_hr_demo_data/static/img/employee_14.jpeg"/>
+    </record>
+
+
+    <record id="employee_15" model="hr.employee">
+        <field name="name">Dania Nauman</field>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="job_id" ref="job_sr_teacher"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'),ref('employee_category_1')])]"/>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="phone">(0333)-531-5378</field>
+        <field name="work_email">dania.nau31@yahoo.com</field>
+        <field name="parent_id" ref="employee_11"/>
+        <field name="identification_id">87003</field>
+        <field name="gender">female</field>
+        <field name="birthday">1990-05-03</field>
+        <field name="marital">single</field>
+        <field name="image_1920"  type="base64" file="aarsol_hr_demo_data/static/img/employee_15.jpeg"/>
+    </record>
+
+    <record id="employee_16" model="hr.employee">
+        <field name="name">Raheel Pervaiz</field>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="job_id" ref="job_sr_teacher"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'),ref('employee_category_1')])]"/>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-576-3735</field>
+        <field name="work_email">raheel.per55@yahoo.com</field>
+        <field name="parent_id" ref="employee_11"/>
+        <field name="identification_id">599087</field>
+        <field name="gender">male</field>
+        <field name="birthday">1990-09-07</field>
+        <field name="marital">single</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_16.jpeg"/>
+    </record>
+
+    <record id="employee_17" model="hr.employee">
+        <field name="name">Bisma Faisal</field>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="job_id" ref="job_jr_teacher"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'),ref('employee_category_1')])]"/>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="phone">(0321)-532-3841</field>
+        <field name="work_email">bisma.faisal77@example.com</field>
+        <field name="parent_id" ref="employee_11"/>
+        <field name="identification_id">84408</field>
+        <field name="gender">female</field>
+        <field name="birthday">1989-01-03</field>
+        <field name="marital">single</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_17.jpeg"/>
+    </record>
+
+    <record id="employee_18" model="hr.employee">
+        <field name="name">Aizba Khalid</field>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="job_id" ref="job_jr_teacher"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'),ref('employee_category_1')])]"/>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="phone">(0345)-518-8232</field>
+        <field name="work_email">aizba.kha47@yahoo.com</field>
+        <field name="parent_id" ref="employee_11"/>
+        <field name="identification_id">93472</field>
+        <field name="gender">female</field>
+        <field name="birthday">1992-08-13</field>
+        <field name="marital">single</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_18.jpeg"/>
+    </record>
+
+    <record id="employee_19" model="hr.employee">
+        <field name="name">Alina Laghari</field>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="job_id" ref="job_jr_teacher"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'),ref('employee_category_1')])]"/>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="phone">(0345)-569-1352</field>
+        <field name="work_email">alina.laghari22@yahoo.com</field>
+        <field name="parent_id" ref="employee_11"/>
+        <field name="identification_id">78562</field>
+        <field name="gender">female</field>
+        <field name="birthday">1993-05-03</field>
+        <field name="marital">single</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_19.jpeg"/>
+    </record>
+
+    <record id="employee_20" model="hr.employee">
+        <field name="name">Abid Ali</field>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="job_id" ref="job_jr_teacher"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'),ref('employee_category_1')])]"/>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_email">abid.ali39@yahoo.com</field>
+        <field name="phone">(0321)-533-3393</field>
+        <field name="parent_id" ref="employee_11"/>
+        <field name="identification_id">73552</field>
+        <field name="gender">male</field>
+        <field name="birthday">1991-11-08</field>
+        <field name="marital">single</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_20.jpeg"/>
+    </record>
+
+     <record id="employee_21" model="hr.employee">
+        <field name="name">Abiha Shaukat</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="phone">(0321)-566-6679</field>
+        <field name="work_email">abiha.shauk91@yahoo.com</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'),ref('employee_category_1')])]"/>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="job_id" ref="job_jr_teacher"/>
+        <field name="parent_id" ref="employee_11"/>
+        <field name="identification_id">41860</field>
+        <field name="gender">female</field>
+        <field name="birthday">1992-12-03</field>
+        <field name="marital">single</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_21.jpeg"/>
+     </record>
+
+    <record id="employee_22" model="hr.employee">
+        <field name="name">Nida Azeem</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-523-3279</field>
+        <field name="work_email">nida.azeem11@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'), ref('employee_category_1')])]"/>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="job_id" ref="job_jr_teacher"/>
+        <field name="parent_id" ref="employee_11"/>
+        <field name="identification_id">94209</field>
+        <field name="gender">female</field>
+        <field name="birthday">1991-05-03</field>
+        <field name="marital">single</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_22.jpeg"/>
+    </record>
+
+    <record id="employee_23" model="hr.employee">
+        <field name="name">Bushra Babar</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-533-8889</field>
+        <field name="work_email">bushra.babar1@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'), ref('employee_category_1')])]"/>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="job_id" ref="job_jr_teacher"/>
+        <field name="parent_id" ref="employee_11"/>
+        <field name="identification_id">802337</field>
+        <field name="gender">female</field>
+        <field name="birthday">1992-02-18</field>
+        <field name="marital">single</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_23.jpeg"/>
+    </record>
+
+    <!--
+    <record id="employee_24" model="hr.employee">
+        <field name="name">Nelofer Bakhtiar</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-568-9979</field>
+        <field name="work_email">nelo.bakh88@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_3'), ref('employee_category_2'), ref('employee_category_4')])]"/>
+        <field name="job_id" ref="hr.job_dir_Exam"/>
+        <field name="department_id" ref="dep_exam"/>
+        <field name="parent_id" ref="employee_1"/>
+        <field name="identification_id">563398</field>
+        <field name="gender">Female</field>
+        <field name="birthday">1982-12-09</field>
+        <field name="country_of_birth">Pakistan</field>
+        <field name="marital">Married</field>
+        <field name="image" type="base64" file="aarsol_hr_demo_data/static/img/employee_24.jpeg"/>
+    </record>
+-->
+<!--
+    <record id="employee_25" model="hr.employee">
+        <field name="name">Shumaila Baig</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="phone">(0321)-596-9999</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="work_email">shumaila.baig123@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_3'), ref('employee_category_2')])]"/>
+        <field name="job_id" ref="hr.job_invigilator"/>
+        <field name="department_id" ref="dep_exam"/>
+        <field name="parent_id" ref="employee_24"/>
+        <field name="identification_id">84723</field>
+        <field name="gender">Female</field>
+        <field name="birthday">1993-11-03</field>
+        <field name="country_of_birth">Pakistan</field>
+        <field name="marital">Single</field>
+        <field name="image" type="base64" file="aarsol_hr_demo_data/static/img/employee_25.jpeg"/>
+    </record>
+-->
+<!--
+    <record id="employee_26" model="hr.employee">
+        <field name="name">Hamza Abbasi</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-577-2349</field>
+        <field name="work_email">hamza.abbasi56@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_3'), ref('employee_category_4')])]"/>
+        <field name="job_id" ref="hr.job_invigilator"/>
+        <field name="department_id" ref="dep_exam"/>
+        <field name="parent_id" ref="employee_24"/>
+        <field name="identification_id">80993</field>
+        <field name="gender">Male</field>
+        <field name="birthday">1988-09-10</field>
+        <field name="country_of_birth">Pakistan</field>
+        <field name="marital">Married</field>
+        <field name="image" type="base64" file="aarsol_hr_demo_data/static/img/employee_26.jpeg"/>
+    </record>
+-->
+<!--
+    <record id="employee_27" model="hr.employee">
+        <field name="name">Hassan Khan</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-599-1234</field>
+        <field name="work_email">hassan.khan12@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4')])]"/>
+        <field name="job_id" ref="hr.job_invigilator"/>
+        <field name="department_id" ref="dep_exam"/>
+        <field name="parent_id" ref="employee_24"/>
+        <field name="identification_id">67443</field>
+        <field name="gender">Male</field>
+        <field name="birthday">1986-11-08</field>
+        <field name="country_of_birth">Pakistan</field>
+        <field name="marital">Married</field>
+        <field name="image" type="base64" file="aarsol_hr_demo_data/static/img/employee_27.jpeg"/>
+    </record>
+-->
+        <!--
+    <record id="employee_28" model="hr.employee">
+        <field name="name">Hasnain Hussain Shaukat</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-545-6112</field>
+        <field name="work_email">hasnain.hussain85@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_1), ref('employee_category_4')])]"/>
+        <field name="job_id" ref="hr.job_invigilator"/>
+        <field name="department_id" ref="dep_exam"/>
+        <field name="parent_id" ref="employee_24"/>
+        <field name="identification_id">17764</field>
+        <field name="gender">Male</field>
+        <field name="birthday">1991-10-03</field>
+        <field name="country_of_birth">Pakistan</field>
+        <field name="marital">Single</field>
+        <field name="image" type="base64" file="aarsol_hr_demo_data/static/img/employee_28.jpeg"/>
+    </record>
+	-->
+ <!--
+    <record id="employee_29" model="hr.employee">
+        <field name="name">Hassaan Awais</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-544-8903</field>
+        <field name="work_email">hassan.awais34@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_3, ref('employee_category_4')])]"/>
+        <field name="job_id" ref="hr.job_invigilator"/>
+        <field name="department_id" ref="dep_exam"/>
+        <field name="parent_id" ref="employee_24"/>
+        <field name="identification_id">90556</field>
+        <field name="gender">Male</field>
+        <field name="birthday">1991-12-10</field>
+        <field name="country_of_birth">Pakistan</field>
+        <field name="marital">Single</field>
+        <field name="image" type="base64" file="aarsol_hr_demo_data/static/img/employee_29.jpeg"/>
+    </record>
+-->
+
+        <!--
+    <record id="employee_30" model="hr.employee">
+        <field name="name">Saeed Anwer</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-579-1466</field>
+        <field name="work_email">saeed.anwer78@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4')])]"/>
+        <field name="job_id" ref="hr.job_invigilator"/>
+        <field name="department_id" ref="dep_exam"/>
+        <field name="parent_id" ref="employee_24"/>
+        <field name="identification_id">780995</field>
+        <field name="gender">Male</field>
+        <field name="birthday">1993-08-30</field>
+        <field name="country_of_birth">Pakistan</field>
+        <field name="marital">Single</field>
+        <field name="image" type="base64" file="aarsol_hr_demo_data/static/img/employee_30.jpeg"/>
+    </record>
+    -->
+
+<!--
+    <record id="employee_31" model="hr.employee">
+        <field name="name">Sidra Batool</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-549-1634</field>
+        <field name="work_email">sidra.batoal16@yahoo@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'), ref('employee_category_1')])]"/>
+        <field name="job_id" ref="hr.job_dir_adm"/>
+        <field name="department_id" ref="dep_admission"/>
+        <field name="parent_id" ref="employee_1"/>
+        <field name="identification_id">76634</field>
+        <field name="gender">Female</field>
+        <field name="birthday">1982-04-03</field>
+        <field name="country_of_birth">Pakistan</field>
+        <field name="marital">Married</field>
+        <field name="image" type="base64" file="aarsol_hr_demo_data/static/img/employee_31.jpeg"/>
+    </record>
+-->
+        <!--
+    <record id="employee_32" model="hr.employee">
+        <field name="name">Eshal Umar</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-599-1111</field>
+        <field name="work_email">eshal.umar77@yahoo@yahoo.com</field>
+        <field name="job_id" ref="hr.job_adm_officer"/>
+        <field name="department_id" ref="dep_admission"/>
+        <field name="parent_id" ref="employee_31"/>
+        <field name="identification_id">45223</field>
+        <field name="gender">Female</field>
+        <field name="birthday">1989-09-03</field>
+        <field name="country_of_birth">Pakistan</field>
+        <field name="marital">Single</field>
+        <field name="image" type="base64" file="aarsol_hr_demo_data/static/img/employee_32.jpeg"/>
+    </record>
+-->
+        <!--
+    <record id="employee_33" model="hr.employee">
+        <field name="name">Zainab Bilal</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-579-2134</field>
+        <field name="work_email">zainab.bilal99@yahoo@yahoo.com</field>
+        <field name="job_id" ref="hr.job_adm_officer"/>
+        <field name="department_id" ref="dep_admission"/>
+        <field name="parent_id" ref="employee_31"/>
+        <field name="identification_id">67443</field>
+        <field name="gender">Female</field>
+        <field name="birthday">1990-09-22</field>
+        <field name="country_of_birth">Pakistan</field>
+        <field name="marital">Single</field>
+        <field name="image" type="base64" file="aarsol_hr_demo_data/static/img/employee_33.jpeg"/>
+    </record>
+	-->
+    <!--
+    <record id="employee_34" model="hr.employee">
+        <field name="name">Malaika Usman Bashir</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="phone">(0321)-569-6634</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="work_email">malaika.usman54@yahoo@yahoo.com</field>
+        <field name="job_id" ref="hr.job_adm_officer"/>
+        <field name="department_id" ref="dep_admission"/>
+        <field name="parent_id" ref="employee_31"/>
+        <field name="identification_id">60098</field>
+        <field name="gender">Female</field>
+        <field name="birthday">1991-10-17</field>
+        <field name="country_of_birth">Pakistan</field>
+        <field name="marital">Married</field>
+        <field name="image" type="base64" file="aarsol_hr_demo_data/static/img/employee_34.jpeg"/>
+    </record>
+	-->
+        <!--
+    <record id="employee_35" model="hr.employee">
+        <field name="name">Khadija Kamran</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-566-3333</field>
+        <field name="work_email">khadija.kamran56@yahoo@yahoo.com</field>
+        <field name="job_id" ref="hr.job_adm_officer"/>
+        <field name="department_id" ref="dep_admission"/>
+        <field name="parent_id" ref="employee_31"/>
+        <field name="identification_id">75543</field>
+        <field name="gender">Female</field>
+        <field name="birthday">1990-01-18</field>
+        <field name="country_of_birth">Pakistan</field>
+        <field name="marital">Married</field>
+        <field name="image" type="base64" file="aarsol_hr_demo_data/static/img/employee_35.jpeg"/>
+    </record>
+	-->
+
+   <record id="employee_36" model="hr.employee">
+        <field name="name">Jannat Mir Bashir</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-529-4534</field>
+        <field name="work_email">jannat.mir18@yahoo@yahoo.com</field>
+        <field name="job_id" ref="job_purchase_officer"/>
+        <field name="department_id" ref="dep_procurement"/>
+        <field name="parent_id" ref="employee_2"/>
+        <field name="identification_id">18872</field>
+        <field name="gender">female</field>
+        <field name="birthday">1988-05-15</field>
+        <field name="marital">married</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_36.jpeg"/>
+    </record>
+
+   <record id="employee_37" model="hr.employee">
+        <field name="name">Dua Alam</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-589-1134</field>
+        <field name="work_email">dua.alam98@yahoo@yahoo.com</field>
+        <field name="job_id" ref="job_purchase_officer"/>
+        <field name="department_id" ref="dep_procurement"/>
+        <field name="parent_id" ref="employee_2"/>
+        <field name="identification_id">17732</field>
+        <field name="gender">female</field>
+        <field name="birthday">1992-09-03</field>
+        <field name="marital">single</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_37.jpeg"/>
+    </record>
+
+
+   <record id="employee_38" model="hr.employee">
+        <field name="name">Zahra Ali</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-544-4434</field>
+        <field name="work_email">zahra.ali77@yahoo@yahoo.com</field>
+        <field name="job_id" ref="job_consultant"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_5')])]"/>
+        <field name="department_id" ref="dep_lgl"/>
+        <field name="parent_id" ref="employee_1"/>
+        <field name="identification_id">85541</field>
+        <field name="gender">female</field>
+        <field name="birthday">1984-07-23</field>
+        <field name="marital">married</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_38.jpeg"/>
+    </record>
+<!--
+   <record id="employee_39" model="hr.employee">
+        <field name="name">Sara Bashir</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-589-1134</field>
+        <field name="work_email">sara.bashir67@yahoo@yahoo.com</field>
+        <field name="job_id" ref="job_legal_counselor"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'),ref('employee_category_6')])]"/>
+        <field name="department_id" ref="dep_finance"/>
+        <field name="parent_id" ref="employee_1"/>
+        <field name="identification_id">599087</field>
+        <field name="gender">female</field>
+        <field name="birthday">1982-05-03</field>
+        <field name="marital">single</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_39.jpeg"/>
+    </record>
+-->
+   <record id="employee_40" model="hr.employee">
+        <field name="name">Zara Hamza</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-539-3334</field>
+        <field name="work_email">zara.hamza27@yahoo@yahoo.com</field>
+        <field name="job_id" ref="job_counselor"/>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'),ref('employee_category_6')])]"/>
+        <field name="department_id" ref="dep_administration"/>
+        <field name="parent_id" ref="employee_1"/>
+        <field name="identification_id">84509</field>
+        <field name="gender">female</field>
+        <field name="birthday">1991-05-03</field>
+        <field name="marital">married</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_40.jpeg"/>
+    </record>
+
+
+   <record id="employee_41" model="hr.employee">
+        <field name="name">Hamza Uzair</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="phone">(0321)-568-9999</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="work_email">hamza.uzair88@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_3')])]"/>
+        <field name="job_id" ref="job_dir_it"/>
+        <field name="department_id" ref="dep_it"/>
+        <field name="parent_id" ref="employee_1"/>
+        <field name="identification_id">45372</field>
+        <field name="gender">male</field>
+        <field name="birthday">1991-02-09</field>
+        <field name="marital">married</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_41.jpeg"/>
+    </record>
+
+   <record id="employee_42" model="hr.employee">
+        <field name="name">Qaiser Waheed</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-562-2279</field>
+        <field name="work_email">qaiser.waheed67@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_3'), ref('employee_category_1')])]"/>
+        <field name="job_id" ref="job_developer"/>
+        <field name="department_id" ref="dep_it"/>
+        <field name="parent_id" ref="employee_41"/>
+        <field name="identification_id">29833</field>
+        <field name="gender">male</field>
+        <field name="birthday">1992-06-23</field>
+        <field name="marital">married</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_42.jpeg"/>
+    </record>
+
+   <record id="employee_43" model="hr.employee">
+        <field name="name">Naqash Yawar Bakhtiar</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-561-111</field>
+        <field name="work_email">naq.yawar088@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4')])]"/>
+        <field name="job_id" ref="job_developer"/>
+        <field name="department_id" ref="dep_it"/>
+        <field name="parent_id" ref="employee_41"/>
+        <field name="identification_id">77665</field>
+        <field name="gender">male</field>
+        <field name="birthday">1991-08-03</field>
+        <field name="marital">married</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_43.jpeg"/>
+    </record>
+
+   <record id="employee_44" model="hr.employee">
+        <field name="name">Nabeel Ashraf</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-551-771</field>
+        <field name="work_email">nabeel.ashraf@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4')])]"/>
+        <field name="job_id" ref="job_developer"/>
+        <field name="department_id" ref="dep_it"/>
+        <field name="parent_id" ref="employee_41"/>
+        <field name="identification_id">38964</field>
+        <field name="gender">male</field>
+        <field name="birthday">1988-05-03</field>
+        <field name="marital">married</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_44.jpeg"/>
+    </record>
+
+   <record id="employee_45" model="hr.employee">
+        <field name="name">Ismail Anwar Bakhtiar</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-541-8911</field>
+        <field name="work_email">ismail.anw23@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_1'), ref('employee_category_4')])]"/>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="job_id" ref="job_jr_teacher"/>
+        <field name="parent_id" ref="employee_11"/>
+        <field name="identification_id">85567</field>
+        <field name="gender">male</field>
+        <field name="birthday">1993-09-03</field>
+        <field name="marital">single</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_45.jpeg"/>
+    </record>
+
+   <record id="employee_46" model="hr.employee">
+        <field name="name">Faiza Sohail</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-588-1119</field>
+        <field name="work_email">faiza.sohail66@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_1'), ref('employee_category_4')])]"/>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="job_id" ref="job_jr_teacher"/>
+        <field name="parent_id" ref="employee_11"/>
+        <field name="identification_id">84556</field>
+        <field name="gender">female</field>
+        <field name="birthday">1995-09-23</field>
+        <field name="marital">single</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_46.jpeg"/>
+    </record>
+
+        <!--
+   <record id="employee_47" model="hr.employee">
+        <field name="name">Farah Shahbaz</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="phone">(0321)-566-7878</field>
+        <field name="work_email">farah.shahbaz43@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'), ref('employee_category_1')])]"/>
+        <field name="job_id" ref="ExecutiveOfficer"/>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="job_id" ref="hr.job_jr_teacher"/>
+        <field name="parent_id" ref="employee_11"/>
+        <field name="identification_id">46209</field>
+        <field name="gender">female</field>
+        <field name="birthday">1994-03-14</field>
+        <field name="marital">single</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_47.jpeg"/>
+   </record>
+-->
+   <record id="employee_48" model="hr.employee">
+        <field name="name">Noor Aslam</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="phone">(0321)-501-0000</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="work_email">noor.aslam08@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'), ref('employee_category_1')])]"/>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="job_id" ref="job_sr_teacher"/>
+        <field name="parent_id" ref="employee_11"/>
+        <field name="identification_id">84456</field>
+        <field name="gender">male</field>
+        <field name="birthday">1992-09-03</field>
+        <field name="marital">married</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_48.jpeg"/>
+   </record>
+
+   <record id="employee_49" model="hr.employee">
+        <field name="name">Naila Basharat</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="phone">(0321)-566-6667</field>
+        <field name="work_phone">(021)-555-2389</field>
+        <field name="work_email">naila.basharat@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'),ref('employee_category_1')])]"/>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="job_id" ref="job_sr_teacher"/>
+        <field name="parent_id" ref="employee_11"/>
+        <field name="identification_id">20654</field>
+        <field name="gender">female</field>
+        <field name="birthday">1990-09-26</field>
+        <field name="marital">married</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_49.jpeg"/>
+   </record>
+
+   <record id="employee_50" model="hr.employee">
+        <field name="name">Rabail Haider</field>
+        <field name="work_location">Building 1, Second Floor</field>
+        <field name="work_phone">(0321)-522-1111</field>
+        <field name="phone">(021)-555-2389</field>
+        <field name="work_email">rabail.haider33@yahoo.com</field>
+        <field name="category_ids" eval="[(6, 0, [ref('employee_category_4'),ref('employee_category_1')])]"/>
+        <field name="department_id" ref="dep_academics"/>
+        <field name="job_id" ref="job_sr_teacher"/>
+        <field name="parent_id" ref="employee_11"/>
+        <field name="identification_id">76206</field>
+        <field name="gender">female</field>
+        <field name="birthday">1991-01-29</field>
+        <field name="marital">single</field>
+        <field name="image_1920" type="base64" file="aarsol_hr_demo_data/static/img/employee_50.jpeg"/>
+   </record>
+
+
+
+    </data>
+</odoo>
