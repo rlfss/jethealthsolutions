@@ -11,6 +11,9 @@
 	'data': [
 		'data/hr_demo.xml',
 		'data/hr_attendance_demo.xml',
+		'data/hr_resume_demo.xml',
+
+		'data/hr.employee.skill.csv',
 	],
 	'license': 'AGPL-3',
 	'installable': True,

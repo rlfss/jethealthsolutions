@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!--Skill Types-->
+        <record id="hr_skill_type_lang" model="hr.skill.type">
+            <field name="name">Languages</field>
+        </record>
+        <record id="hr_skill_type_dev" model="hr.skill.type">
+            <field name="name">Development</field>
+        </record>
+        <record id="hr_skill_type_comm" model="hr.skill.type">
+            <field name="name">Communication</field>
+        </record>
+        <record id="hr_skill_type_train_teach" model="hr.skill.type">
+            <field name="name">Training and Teaching</field>
+        </record>
+
+
+            <!--Skill Levels-->
+        <record id="hr_skill_level_a1" model="hr.skill.level">
+            <field name="name">A1</field>
+            <field name="level_progress">10</field>
+            <field name="skill_type_id" ref="hr_skill_type_lang"/>
+        </record>
+        <record id="hr_skill_level_a2" model="hr.skill.level">
+            <field name="name">A2</field>
+            <field name="level_progress">40</field>
+            <field name="skill_type_id" ref="hr_skill_type_lang"/>
+        </record>
+        <record id="hr_skill_level_b1" model="hr.skill.level">
+            <field name="name">B1</field>
+            <field name="level_progress">60</field>
+            <field name="skill_type_id" ref="hr_skill_type_lang"/>
+        </record>
+        <record id="hr_skill_level_b2" model="hr.skill.level">
+            <field name="name">B2</field>
+            <field name="level_progress">75</field>
+            <field name="skill_type_id" ref="hr_skill_type_lang"/>
+        </record>
+        <record id="hr_skill_level_c1" model="hr.skill.level">
+            <field name="name">C1</field>
+            <field name="level_progress">85</field>
+            <field name="skill_type_id" ref="hr_skill_type_lang"/>
+        </record>
+        <record id="hr_skill_level_c2" model="hr.skill.level">
+            <field name="name">C2</field>
+            <field name="level_progress">100</field>
+            <field name="skill_type_id" ref="hr_skill_type_lang"/>
+        </record>
+
+        <record id="hr_skill_level_beginner" model="hr.skill.level">
+            <field name="name">Beginner</field>
+            <field name="level_progress">15</field>
+            <field name="skill_type_id" ref="hr_skill_type_dev"/>
+        </record>
+        <record id="hr_skill_level_elementary" model="hr.skill.level">
+            <field name="name">Elementary</field>
+            <field name="level_progress">25</field>
+            <field name="skill_type_id" ref="hr_skill_type_dev"/>
+        </record>
+        <record id="hr_skill_level_intermediate" model="hr.skill.level">
+            <field name="name">Intermediate</field>
+            <field name="level_progress">50</field>
+            <field name="skill_type_id" ref="hr_skill_type_dev"/>
+        </record>
+        <record id="hr_skill_level_advanced" model="hr.skill.level">
+            <field name="name">Advanced</field>
+            <field name="level_progress">80</field>
+            <field name="skill_type_id" ref="hr_skill_type_dev"/>
+        </record>
+        <record id="hr_skill_level_expert" model="hr.skill.level">
+            <field name="name">Expert</field>
+            <field name="level_progress">100</field>
+            <field name="skill_type_id" ref="hr_skill_type_dev"/>
+        </record>
+
+        <record id="hr_skill_level_cl1" model="hr.skill.level">
+            <field name="name">L1</field>
+            <field name="level_progress">25</field>
+            <field name="skill_type_id" ref="hr_skill_type_comm"/>
+        </record>
+        <record id="hr_skill_level_cl2" model="hr.skill.level">
+            <field name="name">L2</field>
+            <field name="level_progress">50</field>
+            <field name="skill_type_id" ref="hr_skill_type_comm"/>
+        </record>
+        <record id="hr_skill_level_cl3" model="hr.skill.level">
+            <field name="name">L3</field>
+            <field name="level_progress">75</field>
+            <field name="skill_type_id" ref="hr_skill_type_comm"/>
+        </record>
+        <record id="hr_skill_level_cl4" model="hr.skill.level">
+            <field name="name">L4</field>
+            <field name="level_progress">100</field>
+            <field name="skill_type_id" ref="hr_skill_type_comm"/>
+        </record>
+
+        <record id="hr_skill_level_tl1" model="hr.skill.level">
+            <field name="name">L1</field>
+            <field name="level_progress">25</field>
+            <field name="skill_type_id" ref="hr_skill_type_train_teach"/>
+        </record>
+        <record id="hr_skill_level_tl2" model="hr.skill.level">
+            <field name="name">L2</field>
+            <field name="level_progress">50</field>
+            <field name="skill_type_id" ref="hr_skill_type_train_teach"/>
+        </record>
+        <record id="hr_skill_level_tl3" model="hr.skill.level">
+            <field name="name">L3</field>
+            <field name="level_progress">75</field>
+            <field name="skill_type_id" ref="hr_skill_type_train_teach"/>
+        </record>
+        <record id="hr_skill_level_tl4" model="hr.skill.level">
+            <field name="name">L4</field>
+            <field name="level_progress">100</field>
+            <field name="skill_type_id" ref="hr_skill_type_train_teach"/>
+        </record>
+
+        <!-- **** Skills **** -->
+        <!-- Languages -->
+        <record id="hr_skill_french" model="hr.skill">
+            <field name="name">French</field>
+            <field name="skill_type_id" ref="hr_skill_type_lang"/>
+        </record>
+        <record id="hr_skill_urdu" model="hr.skill">
+            <field name="name">Urdu</field>
+            <field name="skill_type_id" ref="hr_skill_type_lang"/>
+        </record>
+        <record id="hr_skill_english" model="hr.skill">
+            <field name="name">English</field>
+            <field name="skill_type_id" ref="hr_skill_type_lang"/>
+        </record>
+        <record id="hr_skill_german" model="hr.skill">
+            <field name="name">German</field>
+            <field name="skill_type_id" ref="hr_skill_type_lang"/>
+        </record>
+        <record id="hr_skill_arabic" model="hr.skill">
+            <field name="name">Arabic</field>
+            <field name="skill_type_id" ref="hr_skill_type_lang"/>
+        </record>
+
+
+        <!-- Development -->
+        <record id="hr_skill_js" model="hr.skill">
+            <field name="name">Javascript</field>
+            <field name="skill_type_id" ref="hr_skill_type_dev"/>
+        </record>
+        <record id="hr_skill_python" model="hr.skill">
+            <field name="name">Python</field>
+            <field name="skill_type_id" ref="hr_skill_type_dev"/>
+        </record>
+        <record id="hr_skill_c" model="hr.skill">
+            <field name="name">C/C++</field>
+            <field name="skill_type_id" ref="hr_skill_type_dev"/>
+        </record>
+        <record id="hr_skill_android" model="hr.skill">
+            <field name="name">Android</field>
+            <field name="skill_type_id" ref="hr_skill_type_dev"/>
+        </record>
+
+        <record id="hr_skill_nosql" model="hr.skill">
+            <field name="name">NoSQL</field>
+            <field name="skill_type_id" ref="hr_skill_type_dev"/>
+        </record>
+
+        <!-- Communication -->
+        <record id="hr_skill_analytics" model="hr.skill">
+            <field name="name">Analytics</field>
+            <field name="skill_type_id" ref="hr_skill_type_comm"/>
+        </record>
+        <record id="hr_skill_public" model="hr.skill">
+            <field name="name">Public Speaking</field>
+            <field name="skill_type_id" ref="hr_skill_type_comm"/>
+        </record>
+        <record id="hr_skill_visual" model="hr.skill">
+            <field name="name">Visual Communication</field>
+            <field name="skill_type_id" ref="hr_skill_type_comm"/>
+        </record>
+        <record id="hr_skill_written" model="hr.skill">
+            <field name="name">Written Communication</field>
+            <field name="skill_type_id" ref="hr_skill_type_comm"/>
+        </record>
+
+        <!-- Training and Teaching -->
+        <record id="hr_skill_com" model="hr.skill">
+            <field name="name">Communication</field>
+            <field name="skill_type_id" ref="hr_skill_type_train_teach"/>
+        </record>
+
+        <record id="hr_skill_patience" model="hr.skill">
+            <field name="name">Patience Teaching Skills</field>
+            <field name="skill_type_id" ref="hr_skill_type_train_teach"/>
+        </record>
+
+        <record id="hr_skill_mentoring" model="hr.skill">
+            <field name="name">Mentoring</field>
+            <field name="skill_type_id" ref="hr_skill_type_train_teach"/>
+        </record>
+        <record id="hr_skill_leadership" model="hr.skill">
+            <field name="name">Leadership</field>
+            <field name="skill_type_id" ref="hr_skill_type_train_teach"/>
+        </record>
+        <record id="hr_skill_performance" model="hr.skill">
+            <field name="name">Performance Management</field>
+            <field name="skill_type_id" ref="hr_skill_type_train_teach"/>
+        </record>
+        <record id="hr_skill_self_discipline" model="hr.skill">
+            <field name="name">Self-Discipline</field>
+            <field name="skill_type_id" ref="hr_skill_type_train_teach"/>
+        </record>
+
+
+
+
+        <!-- Resumé
+        <record id="employee_resume_line_admin_1" model="hr.resume.line">
+            <field name="employee_id" ref="hr.employee_1"/>
+            <field name="name">Université Libre de Bruxelles - Polytechnique</field>
+            <field name="date_start" eval="(datetime.now()+relativedelta(years=-12)).strftime('%Y-09-17')"/>
+            <field name="date_end" eval="(datetime.now()+relativedelta(years=-7)).strftime('%Y-09-10')"/>
+            <field name="line_type_id" ref="resume_type_education"/>
+            <field name="description">
+                Master in Electrical engineering
+                Master thesis: Better grid management and control through machine learning
+            </field>
+        </record>
+
+        <record id="employee_resume_line_admin_2" model="hr.resume.line">
+            <field name="employee_id" ref="hr.employee_1"/>
+            <field name="name">Saint-Joseph School</field>
+            <field name="date_start" eval="(datetime.now()+relativedelta(years=-18)).strftime('%Y-09-01')"/>
+            <field name="date_end" eval="(datetime.now()+relativedelta(years=-12)).strftime('%Y-06-30')"/>
+            <field name="line_type_id" ref="resume_type_education"/>
+            <field name="description">
+                Science &amp; math
+            </field>
+        </record>
+
+        <record id="employee_resume_line_admin_4" model="hr.resume.line">
+            <field name="employee_id" ref="hr.employee_1"/>
+            <field name="name">Odoo SA</field>
+            <field name="date_start" eval="(datetime.now()+relativedelta(years=-3)).strftime('%Y-11-01')"/>
+            <field name="line_type_id" ref="resume_type_experience"/>
+            <field name="description">
+                Job position: Development team leader
+                Core Python Framework
+            </field>
+        </record>
+
+        <record id="employee_resume_line_admin_3" model="hr.resume.line">
+            <field name="employee_id" ref="hr.employee_1"/>
+            <field name="name">Burtho Inc.</field>
+            <field name="date_start" eval="(datetime.now()+relativedelta(years=-7)).strftime('%Y-09-10')"/>
+            <field name="date_end" eval="(datetime.now()+relativedelta(years=-3)).strftime('%Y-09-10')"/>
+            <field name="line_type_id" ref="resume_type_experience"/>
+            <field name="description">
+                Job position: Product manager
+                Business strategy, functional requirements, resource planning, product lifecycle management, etc.
+            </field>
+        </record>-->
+
+    </data>
+</odoo>
