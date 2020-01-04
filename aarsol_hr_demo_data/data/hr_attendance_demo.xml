@@ -5299,8 +5299,10 @@
             <field eval="(datetime.now()+relativedelta(months=-1)).strftime('%Y-%m-05 12:42')" name="check_out"/>
             <field name="employee_id" ref="employee_35"/>
         </record>
--->
-        <!--
+
+
+
+
         <record id="attendance36" model="hr.attendance">
             <field eval="(datetime.now()+relativedelta(months=-1)).strftime('%Y-%m-06 13:10')" name="check_in"/>
             <field eval="(datetime.now()+relativedelta(months=-1)).strftime('%Y-%m-06 18:34')" name="check_out"/>
