@@ -13,7 +13,7 @@
                         <field name="code"/>
                     </xpath>
 
-                    <xpath expr="//notebook/page[2]/div/div/group[0]" position="replace">
+                    <xpath expr="//notebook/page[2]/div/div/group" position="replace">
                         <field name="address_id" invisible="1"/>
                         <field name="section_id" string="Section" invisible="1"/>
                         <field name="job_title" invisible="1"/>
