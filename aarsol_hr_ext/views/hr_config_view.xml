@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <!--  HR Section Form-->
+         <record id="view_hr_section_form" model="ir.ui.view">
+            <field name="name">hr.section.form.view</field>
+            <field name="model">hr.section</field>
+            <field name="arch" type="xml">
+                <form string="Employee Section">
+                 <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="employees" string="Employees/Contracts">
+                                <field name="employee_ids" edit="false" create="false" delete="false">
+                                     <tree>
+                                         <field name="name"/>
+                                     </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                     </sheet>
+                </form>
+            </field>
+         </record>
+
+        <!-- HR Section Tree-->
+         <record id="view_hr_section_tree" model="ir.ui.view">
+            <field name="name">hr.section.tree.view</field>
+            <field name="model">hr.section</field>
+            <field name="arch" type="xml">
+                <tree string="Employee Section">
+                    <field name="name"/>
+                </tree>
+            </field>
+         </record>
+
+         <!-- HR Section Search View -->
+        <record model="ir.ui.view" id="view_hr_section_search">
+            <field name="name">hr.section.search</field>
+            <field name="model">hr.section</field>
+            <field name="arch" type="xml">
+                <search string="HR Section">
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- HR Section Action View -->
+        <record model="ir.actions.act_window" id="action_hr_section">
+            <field name="name">HR Section</field>
+            <field name="res_model">hr.section</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!--  HR Category Form-->
+         <record id="view_hr_category_form" model="ir.ui.view">
+            <field name="name">hr.category.form.view</field>
+            <field name="model">hr.category</field>
+            <field name="arch" type="xml">
+                <form string="Employee Category">
+                 <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="employees" string="Employees/Contracts">
+                                <field name="employee_ids" edit="false" create="false" delete="false">
+                                     <tree>
+                                         <field name="name"/>
+                                     </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                     </sheet>
+                </form>
+            </field>
+         </record>
+
+        <!-- HR Category Tree-->
+         <record id="view_hr_category_tree" model="ir.ui.view">
+            <field name="name">hr.category.tree.view</field>
+            <field name="model">hr.category</field>
+            <field name="arch" type="xml">
+                <tree string="Employee category">
+                    <field name="name"/>
+                </tree>
+            </field>
+         </record>
+
+         <!-- HR Category Search View -->
+        <record model="ir.ui.view" id="view_hr_section_search">
+            <field name="name">hr.category.search</field>
+            <field name="model">hr.category</field>
+            <field name="arch" type="xml">
+                <search string="HR Category">
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- HR Category Action View -->
+        <record model="ir.actions.act_window" id="action_hr_category">
+            <field name="name">HR Category</field>
+            <field name="res_model">hr.category</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+         <!-- HR Salary Percentage Type Form-->
+         <record id="view_hr_salary_percentage_form" model="ir.ui.view">
+            <field name="name">hr.salary.percentage.form.view</field>
+            <field name="model">hr.salary.percentage.type</field>
+            <field name="arch" type="xml">
+                <form string="Salary Percentage Type">
+                 <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="code" required="0"/>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                     </sheet>
+                </form>
+            </field>
+         </record>
+
+
+        <!-- HR Salary Percentage Type Tree-->
+         <record id="view_hr_salary_percentage_tree" model="ir.ui.view">
+            <field name="name">hr.salary.percentage.tree.view</field>
+            <field name="model">hr.salary.percentage.type</field>
+            <field name="arch" type="xml">
+                <tree string="Salary Percentage Type">
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+         </record>
+
+         <!-- HR Salary Percentage Type Search View -->
+        <record model="ir.ui.view" id="view_hr_salary_percentage_search">
+            <field name="name">hr.salary.percentage.search</field>
+            <field name="model">hr.salary.percentage.type</field>
+            <field name="arch" type="xml">
+                <search string="Salary Percentage Type">
+                    <field name="name"/>
+                    <field name="code"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- HR Salary Percentage Type Action View -->
+        <record model="ir.actions.act_window" id="action_hr_salary_percentage">
+            <field name="name">HR Salary Percentage Type</field>
+            <field name="res_model">hr.salary.percentage.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+         <!-- HR Salary Allowances Form-->
+         <record id="view_hr_salary_allowances_form" model="ir.ui.view">
+            <field name="name">hr.salary.allowances.form.view</field>
+            <field name="model">hr.salary.allowances</field>
+            <field name="arch" type="xml">
+                <form string="HR Salary Allowances">
+                 <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="code" required="0"/>
+                                <field name="head" required="0"/>
+                            </group>
+                            <group>
+                                <field name="percentage_type_id" required="0"/>
+                                <field name="percentage" required="0"/>
+                                <field name="taxable" required="0"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="lines" string="Employees/Contracts">
+                                <field name="lines" edit="false" create="false" delete="false">
+                                     <tree>
+                                         <field name="contract_id"/>
+                                         <field name="employee_id"/>
+                                         <field name="amount"/>
+                                     </tree>
+                                </field>
+                            </page>
+                            <page name="rules" string="Salary Rules">
+                                <field name="rule_ids">
+                                    <tree editable="bottom">
+                                         <field name="salary_structure_id"/>
+                                         <field name="account_id"/>
+                                         <field name="salary_rule_id" readonly="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page name="notes" string="Info">
+                                <field name="note"/>
+                            </page>
+                        </notebook>
+                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+         </record>
+
+
+        <!-- HR Salary Allowances Tree-->
+         <record id="view_hr_salary_allowances_tree" model="ir.ui.view">
+            <field name="name">hr.salary.allowances.tree.view</field>
+            <field name="model">hr.salary.allowances</field>
+            <field name="arch" type="xml">
+                <tree string="HR Salary Allowances">
+                    <field name="name" required="1"/>
+                    <field name="code" required="1"/>
+                    <field name="percentage_type_id" required="1"/>
+                    <field name="percentage" required="1"/>
+                    <field name="taxable" required="1"/>
+                    <field name="head" required="0"/>
+                </tree>
+            </field>
+         </record>
+
+         <!-- HR Salary Allowances Search View -->
+        <record id="view_hr_salary_allowances_search" model="ir.ui.view">
+            <field name="name">hr.salary.allowances.search</field>
+            <field name="model">hr.salary.allowances</field>
+            <field name="arch" type="xml">
+                <search string="HR Salary Allowances">
+                    <field name="name"/>
+                    <field name="code"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- HR Salary Allowances Action View -->
+        <record id="action_hr_salary_allowances" model="ir.actions.act_window">
+            <field name="name">HR Salary Allowances</field>
+            <field name="res_model">hr.salary.allowances</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!-- HR Salary Deductions Form-->
+         <record id="view_hr_salary_deductions_form" model="ir.ui.view">
+            <field name="name">hr.salary.deductions.form.view</field>
+            <field name="model">hr.salary.deductions</field>
+            <field name="arch" type="xml">
+                <form string="HR Salary Deductions">
+                 <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="code"/>
+                                <field name="head" required="0"/>
+                            </group>
+                            <group>
+                                <field name="percentage_type_id" required="1"/>
+                                <field name="percentage" required="1"/>
+                                <field name="taxable" required="1"/>
+                            </group>
+                        </group>
+                         <notebook>
+                            <page name="lines" string="Employees/Contracts">
+                                <field name="lines" edit="false" create="false" delete="false">
+                                     <tree>
+                                         <field name="contract_id"/>
+                                         <field name="employee_id"/>
+                                         <field name="amount"/>
+                                     </tree>
+                                </field>
+                            </page>
+                             <page name="rules" string="Salary Rules">
+                                <field name="rule_ids">
+                                    <tree editable="bottom">
+                                         <field name="salary_structure_id"/>
+                                         <field name="account_id"/>
+                                         <field name="salary_rule_id" readonly="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                             <page name="notes" string="Info">
+                                <field name="note"/>
+                            </page>
+                        </notebook>
+                     </sheet>
+                     <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                     </div>
+                </form>
+            </field>
+         </record>
+
+
+        <!-- HR Salary Deductions Tree-->
+         <record id="view_hr_salary_deductions_tree" model="ir.ui.view">
+            <field name="name">hr.salary.deductions.tree.view</field>
+            <field name="model">hr.salary.deductions</field>
+            <field name="arch" type="xml">
+                <tree string="HR Salary Deductions">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="percentage_type_id"/>
+                    <field name="percentage"/>
+                    <field name="taxable"/>
+                    <field name="head"/>
+                </tree>
+            </field>
+         </record>
+
+         <!-- HR Salary Deductions Search View -->
+        <record model="ir.ui.view" id="view_hr_salary_deductions_search">
+            <field name="name">hr.salary.deductions.search</field>
+            <field name="model">hr.salary.deductions</field>
+            <field name="arch" type="xml">
+                <search string="HR Salary Deductions">
+                    <field name="name"/>
+                    <field name="code"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- HR Salary Allowances Action View -->
+        <record model="ir.actions.act_window" id="action_hr_salary_deductions">
+            <field name="name">HR Salary Deductions</field>
+            <field name="res_model">hr.salary.deductions</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!-- HR PayScale Category Form -->
+         <record id="view_hr_payscale_category_form" model="ir.ui.view">
+            <field name="name">hr.payscale.category.form.view</field>
+            <field name="model">hr.payscale.category</field>
+            <field name="arch" type="xml">
+                <form string="PayScale Category">
+                     <sheet>
+                         <div class="oe_button_box" name="button_box">
+                            <button name="student_documents" type="object" widget="statinfo"
+                                    class="oe_stat_button" icon="fa-calendar" string="Documents">
+                            </button>
+                            <button name="toggle_active" type="object" groups="odoocms.group_cms_manager" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                         <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="code" required="0"/>
+                            </group>
+                            <group>
+                                <field name="active" required="0"/>
+                            </group>
+                        </group>
+
+                        <group string="Pay Scale">
+                            <field name="scale_ids" nolabel="1">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="code"/>
+                                    <field name="basic_pay"/>
+                                    <field name="increment"/>
+                                    <field name="stages"/>
+                                    <field name="last_limit"/>
+                                </tree>
+                            </field>
+                        </group>
+                     </sheet>
+                </form>
+            </field>
+         </record>
+
+
+        <!-- HR PayScale Category Tree-->
+         <record id="view_hr_payscale_category_tree" model="ir.ui.view">
+            <field name="name">hr.pa.scale.category.tree.view</field>
+            <field name="model">hr.payscale.category</field>
+            <field name="arch" type="xml">
+                <tree string="PayScale Category">
+                    <field name="name" required="1"/>
+                    <field name="code" required="0"/>
+                    <field name="active" required="0"/>
+                </tree>
+            </field>
+         </record>
+
+         <!-- HR PayScale Category Search View -->
+        <record id="view_hr_payscale_category_search" model="ir.ui.view" >
+            <field name="name">hr.payscale.category.search</field>
+            <field name="model">hr.payscale.category</field>
+            <field name="arch" type="xml">
+                <search string="PayScale Category">
+                    <field name="name"/>
+                    <field name="code"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- HR PayScale Category Action View -->
+        <record id="action_hr_payscale_category" model="ir.actions.act_window">
+            <field name="name">HR PayScale Category</field>
+            <field name="res_model">hr.payscale.category</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+
+
+        <!-- HR PayScale Form -->
+         <record id="view_hr_payscale_form" model="ir.ui.view">
+            <field name="name">hr.payscale.form</field>
+            <field name="model">hr.payscale</field>
+            <field name="arch" type="xml">
+                <form string="Employee PayScale">
+                 <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="code" required="0"/>
+                                <field name="scale_category_id" required="1"/>
+                            </group>
+                            <group>
+                                <field name="basic_pay" required="1"/>
+                                <field name="increment" required="0"/>
+                                <field name="stages" required="0"/>
+                                <field name="last_limit" required="0"/>
+                            </group>
+                        </group>
+                     </sheet>
+                     <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+         </record>
+
+
+        <!-- HR PayScale Tree-->
+         <record id="view_hr_payscale_tree" model="ir.ui.view">
+            <field name="name">hr.payscale.tree.view</field>
+            <field name="model">hr.payscale</field>
+            <field name="arch" type="xml">
+                <tree string="PayScale">
+                    <field name="name" required="1"/>
+                    <field name="code" required="0"/>
+                    <field name="basic_pay" required="0"/>
+                    <field name="scale_category_id" required="0"/>
+                    <field name="increment" required="0"/>
+                    <field name="stages" required="0"/>
+                    <field name="last_limit" required="0"/>
+                </tree>
+            </field>
+         </record>
+
+         <!-- HR PayScale Search View -->
+        <record model="ir.ui.view" id="view_hr_payscale_search">
+            <field name="name">hr.payscale.search</field>
+            <field name="model">hr.payscale</field>
+            <field name="arch" type="xml">
+                <search string="Payscale Filters">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <newline />
+                    <group expand="0" string="Group By...">
+                        <filter name="group_cateory_id" string="Category" domain="[]" context="{'group_by':'scale_category_id'}"/>
+                        <filter name="group_name" string="Grade" domain="[]" context="{'group_by':'name'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- HR PayScale Action View -->
+        <record model="ir.actions.act_window" id="action_hr_payscale">
+            <field name="name">HR PayScale</field>
+            <field name="res_model">hr.payscale</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+
+    </data>
+</odoo>

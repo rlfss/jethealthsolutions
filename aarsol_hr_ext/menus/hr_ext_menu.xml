@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <menuitem name ="Employee Section" id="menu_hr_section" action="action_hr_section" parent="hr.menu_human_resources_configuration" sequence="108"/>
+        <menuitem name ="Employee Category" id="menu_hr_category" action="action_hr_category" parent="hr.menu_human_resources_configuration" sequence="111"/>
+
+
+        <!-- HR Payroll-->
+
+
+        <menuitem
+                name ="Salary Percentage Type"
+                id="menu_hr_salary_percentage_type"
+                action="action_hr_salary_percentage"
+                parent="hr_payroll.menu_hr_payroll_configuration"
+                sequence="114"/>
+
+        <menuitem
+                name ="Salary Allowances"
+                id="menu_hr_salary_allowances"
+                action="action_hr_salary_allowances"
+                parent="hr_payroll.menu_hr_payroll_configuration"
+                sequence="117"/>
+
+        <menuitem
+                name ="Salary Deduction"
+                id="menu_hr_salary_deduction"
+                action="action_hr_salary_deductions"
+                parent="hr_payroll.menu_hr_payroll_configuration"
+                sequence="120"/>
+
+        <menuitem
+                name ="PayScale Category"
+                id="menu_hr_payscale_category"
+                action="action_hr_payscale_category"
+                parent="hr_payroll.menu_hr_payroll_configuration"
+                sequence="123"/>
+
+        <menuitem
+                name ="PayScale"
+                id="menu_hr_payscale"
+                action="action_hr_payscale"
+                parent="hr_payroll.menu_hr_payroll_configuration"
+                sequence="127"/>
+
+        <menuitem
+                name ="Salary Inputs"
+                id="menu_hr_salary_inputs"
+                action="act_hr_salary_inputs"
+                parent="hr_payroll.menu_hr_payroll_configuration"
+                sequence="150"/>
+
+        <menuitem
+                name ="Benefits &amp; Deductions"
+                id="menu_hr_emp_salary_inputs"
+                action="act_hr_emp_salary_inputs"
+                parent="hr_payroll.menu_hr_payroll_root"
+                groups="hr_payroll.group_hr_payroll_user"
+                sequence="30"/>
+
+
+    </data>
+</odoo>

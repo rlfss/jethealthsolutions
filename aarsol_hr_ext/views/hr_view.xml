@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <!-- HR Employee -->
+        <record id="hr_ext_view_employee_form" model="ir.ui.view">
+            <field name="name">hr.employee.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='mobile_phone']" position="before">
+                        <field name="code"/>
+                    </xpath>
+
+                    <xpath expr="//notebook/page[2]/div/div/group" position="replace">
+                        <field name="address_id" invisible="1"/>
+                        <field name="section_id" string="Section" invisible="1"/>
+                        <field name="job_title" invisible="1"/>
+                    </xpath>
+
+                    <xpath expr="//notebook/page[2]/div" position="after">
+                        <field name="notes" placeholder="Other Information ..." colspan="4"/>
+                    </xpath>
+
+                    <field name="identification_id" position="replace">
+                        <field name="identification_id" invisible="1"/>
+                        <field name="cnic"/>
+                        <field name="religion" string="Religion"/>
+                    </field>
+
+                    <field name="bank_account_id" position="replace">
+                        <field name="bank_account_id" invisible="1"/>
+                        <field name="bank_id" options="{'no_quick_create':True,'no_create_edit':True}"/>
+                        <field name="bank_account_title"/>
+                        <field name="bank_account_no"/>
+                    </field>
+
+                    <xpath expr="//page[@name='personal_information']/group/group[2]" position="attributes">
+                        <attribute name="invisible">True</attribute>
+                    </xpath>
+
+                   <xpath expr="//page[@name='personal_information']/group/group[@name='work_permit']" position="before">
+                       <group>
+                           <label for="street" string="Present Address"/>
+                           <div name="div_address">
+                               <field name="street" placeholder="Street..."/>
+                               <field name="street2" placeholder="Street2"/>
+                               <div class="address_format">
+                                   <field name="city" placeholder="City" style="width: 40%%"/>
+                                   <field name="state_id" class="oe_no_button" placeholder="State" style="width: 37%%" options='{"no_open": True}'/>
+                                   <field name="zip" placeholder="ZIP" style="width: 20%%"/>
+                               </div>
+                               <field name="country_id" placeholder="Country" class="oe_no_button" options='{"no_open": True}'/>
+                           </div>
+                       </group>
+                   </xpath>
+                   <xpath expr="//page[@name='personal_information']/group/group[@name='work_permit']" position="attributes">
+                       <attribute name="invisible">True</attribute>
+                   </xpath>
+
+                    <xpath expr="//page[@name='personal_information']/group/group[last()]" position="attributes">
+                        <attribute name="invisible">True</attribute>
+                    </xpath>
+
+                    <field name="birthday" position="after">
+                        <field name="age"/>
+                    </field>
+
+                    <field name="place_of_birth" position="attributes">
+                        <attribute name="string">Domicile</attribute>
+                    </field>
+
+                    <group name="active_group" position="after">
+                        <group string='Pay Scale' name="payscale">
+                            <field name="payscale_id" options="{'no_create': True, 'limit': 10}"/>
+                            <field name="stage" string="Stage"/>
+                            <field name="category_id" string="Category"/>
+
+                            <field name="manual_slips"/>
+                            <field name="manual_gross"/>
+                            <field name="manual_tax"/>
+                        </group>
+                    </group>
+
+                     <field name="user_id" position="before">
+                        <field name="joining_date"/>
+                        <field name="operation_area_id"/>
+                        <field name="leaving_date"/>
+                    </field>
+
+                     <field name="notes" position="before">
+                         <group name="group_publication_main_group">
+                             <group name='publication_increment' string="Publication Increment">
+                                 <field name="publications"/>
+                                 <field name="rate_per_publication"/>
+                                 <field name="increment_date"/>
+                             </group>
+
+<!--                             For UET-->
+                             <group string="Others">
+                                    <field name="appointment_mode_id" string="Appointment Mode ID"/>
+                                    <field name="retirement_date" string="Retirement Date"/>
+                                    <field name="retired" string="Retired"/>
+                                    <field name="rebateCateg" string="Rebate Category"/>
+                                    <field name="pension_bit" string="Pension Bit"/>
+
+                             </group>
+                         </group>
+                     </field>
+
+                    <page name="personal_information" position="after">
+                        <page string="Academic History">
+                            <field name="academic_ids">
+                                <tree string="Academic Info" editable="bottom"> <!-- create="false" delete="false" edit="false" -->
+                                    <field name="degree_level"/>
+                                    <field name="degree"/>
+                                    <field name="year"/>
+                                    <field name="board"/>
+                                    <field name="subjects"/>
+                                    <field name="total_marks"/>
+                                    <field name="obtained_marks"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page name="experiences" string="Experiences">
+                            <field name="experience_ids" colspan="4" string="Experiences">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="position"/>
+                                    <field name="reporting_to"/>
+                                    <field name="start_date"/>
+                                    <field name="end_date"/>
+                                    <field name="total_experience"/>
+                                </tree>
+                                <form>
+                                    <sheet>
+                                         <div class="oe_title">
+                                            <label for="name" class="oe_edit_only"/>
+                                            <h1>
+                                                <field name="name" placeholder="Company's Name"/>
+                                            </h1>
+                                        </div>
+                                        <group>
+                                            <group>
+                                                <field name="position" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                                <field name="reporting_to" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                                <field name="salary"/>
+                                            </group>
+
+                                            <group >
+                                                <field name="start_date"/>
+                                                <field name="end_date"/>
+                                                <field name="total_experience"/>
+                                            </group>
+                                        </group>
+
+                                        <separator/>
+                                        <group>
+                                            <group>
+                                                <field name="reason_to_leave"/>
+                                            </group>
+                                            <group>
+                                                <field name="responsibilities"/>
+                                            </group>
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                        <page string="Medical History">
+                            <field name="medical_ids">
+                                <tree string="Medical Info" editable="bottom">
+                                    <field name="disease"/>
+                                    <field name="appoinment_date"/>
+                                    <field name="hospital"/>
+
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Family Details">
+                            <field name="family_ids">
+                                <tree string="Family Info" editable="bottom">
+                                    <field name="name"/>
+                                    <field name="relationship"/>
+                                    <field name="phone_no"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                    </page>
+
+                </data>
+            </field>
+        </record>
+
+          <!-- HR Employee -->
+        <record id="view_employee_tree" model="ir.ui.view">
+            <field name="name">hr.employee.tree</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="parent_id" position="before">
+                        <field name="payscale_id" string="Payscale"/>
+                        <field name="category_id" string="Category"/>
+                    </field>
+                </data>
+            </field>
+        </record>
+
+
+        <record id="employee_filter_view" model="ir.ui.view">
+        	<field name="name">hr.employee.filter</field>
+        	<field name="model">hr.employee</field>
+        	<field name="inherit_id" ref="hr.view_employee_filter"/>
+        	<field name="arch" type="xml">
+        	    <data>
+                     <xpath expr="//filter[@name='group_job']" position="after">
+                         <separator/>
+                         <filter name="group_payscale" string="Payscale" domain="[]" context="{'group_by':'payscale_id'}"/>
+                        <separator/>
+                         <filter name="group_category_id" string="Category" domain="[]" context="{'group_by':'category_id'}"/>
+
+                     </xpath>
+                </data>
+            </field>
+        </record>
+
+
+         <!-- HR Contract Form -->
+         <record id="view_inherited_hr_contract_form" model="ir.ui.view">
+            <field name="name">inherited_hr.contract.form.view</field>
+            <field name="model">hr.contract</field>
+             <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <data>
+                     <xpath expr="//page[@name='information']" position="after">
+                         <page string="Allowances" name="Allowances">
+                             <field name="allowances_ids">
+                                 <tree editable="top">
+                                     <field name="employee_id"/>
+                                     <field name="allowance_id"/>
+                                     <field name="amount"/>
+                                 </tree>
+                                 <form>
+                                     <group>
+                                         <group>
+                                               <field name="contract_id"/>
+                                               <field name="employee_id"/>
+                                         </group>
+                                         <group>
+                                             <field name="allowance_id"/>
+                                             <field name="amount"/>
+                                         </group>
+                                     </group>
+                                 </form>
+                             </field>
+                         </page>
+
+                         <page string="Deductions" name="Deductions">
+                             <field name="deductions_ids" editable="top">
+                                 <tree>
+                                     <field name="employee_id"/>
+                                     <field name="deduction_id"/>
+                                     <field name="amount"/>
+                                 </tree>
+                                 <form>
+                                     <group>
+                                         <group>
+                                               <field name="contract_id"/>
+                                               <field name="employee_id"/>
+                                         </group>
+                                         <group>
+                                             <field name="deduction_id"/>
+                                             <field name="amount"/>
+                                         </group>
+                                     </group>
+                                 </form>
+                             </field>
+                         </page>
+
+                     </xpath>
+                </data>
+
+            </field>
+         </record>
+
+        <record id="view_department_tree" model="ir.ui.view">
+            <field name="name">hr.department.tree</field>
+            <field name="model">hr.department</field>
+            <field name="inherit_id" ref="hr.view_department_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='display_name']" position="before">
+                    <field name="code"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_users_form" model="ir.ui.view">
+            <field name="name">res.users.form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='access_rights']" position="after">
+                    <page name="departments" string='Departments'>
+                        <group>
+                            <field name="dept_ids" />
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>
