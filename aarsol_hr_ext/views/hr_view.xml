@@ -18,11 +18,11 @@
                         <field name="section_id" string="Section" invisible="1"/>
                         <field name="job_title" invisible="1"/>
                     </xpath>
-
+-->
                     <xpath expr="//notebook/page[2]/div" position="after">
                         <field name="notes" placeholder="Other Information ..." colspan="4"/>
                     </xpath>
-                    -->
+
 
                     <field name="identification_id" position="replace">
                         <field name="identification_id" invisible="1"/>
